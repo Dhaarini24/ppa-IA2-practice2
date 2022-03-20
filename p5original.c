@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int input()
 {
   int num;
@@ -7,8 +6,6 @@ int input()
   scanf("%d", &num);
   return num;
 }
-
-// Using Students algorithm
 int gcd(int a, int b)
 {
   int i,small,gcd;
@@ -29,13 +26,10 @@ int gcd(int a, int b)
   return gcd;
     
 }
-// Do using euclids algorithm 
-// https://en.wikipedia.org/wiki/Euclidean_algorithm
 void output(int a, int b, int gcd)
 {
   printf("The gcd of %d and %d is %d\n", a, b, gcd);
 }
-
 int main()
 {
   int num1 = input();

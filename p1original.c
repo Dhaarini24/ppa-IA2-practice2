@@ -1,5 +1,4 @@
 #include<stdio.h>
-
  void input(float *base,float *height)
  {
    printf("Enter the value of base and height\n");
