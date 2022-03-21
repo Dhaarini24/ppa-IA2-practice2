@@ -19,7 +19,7 @@ int gcd(int a, int b)
     return a;
   for(i=1;i<=a/2;i++)
   {
-    if ( a%i == 0 && b%i == 0)
+    if (a%i == 0 && b%i == 0)
       gcd = i;
   }
   return gcd;
