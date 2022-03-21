@@ -1,1 +1,54 @@
-
+Breakpoint 1, main () at p6original.c:36
+36  {
+(gdb) n
+38    input_string(str);
+(gdb) s
+input_string (a=0x7ffffbef3380 "\a\307ͺo\177") at p6original.c:4
+4     printf("Enter the string:\n");
+(gdb) n
+Enter the string:
+5     scanf("%s", a);
+(gdb) n
+n
+6   }
+(gdb) n
+main () at p6original.c:40
+40    string_copy(rev_str,str);
+(gdb) s
+string_copy (d=0x7ffffbef33f0 "", s=0x7ffffbef3380 "n") at p6original.c:15
+15    for(int i=0;s[i]!='\0';i++)
+(gdb) n
+16      d[i]=s[i];
+(gdb) n
+15    for(int i=0;s[i]!='\0';i++)
+(gdb) n
+17  }
+(gdb) n
+main () at p6original.c:41
+41    str_reverse(rev_str);
+(gdb) s
+str_reverse (str=0x7ffffbef33f0 "n") at p6original.c:21
+21    n = string_length(str);
+(gdb) n
+22    n--;
+(gdb) n
+23    for (int i = 0; i< n/2;i++)
+(gdb) n
+29    return str;
+(gdb) n
+30  }
+(gdb) n
+main () at p6original.c:42
+42    output(str, rev_str);
+(gdb) s
+output (a=0x7ffffbef3380 "n", reverse_a=0x7ffffbef33f0 "n") at p6original.c:33
+33    printf("The reverse of %s is %s\n", a, reverse_a);
+(gdb) n
+The reverse of n is n
+34  }
+(gdb) n
+main () at p6original.c:43
+43    return 0;
+(gdb) n
+44  }
+(gdb) 
