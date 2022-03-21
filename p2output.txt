@@ -1,1 +1,62 @@
-
+Breakpoint 1, main () at p2original.c:34
+34    a=input_side();
+(gdb) s
+input_side () at p2original.c:3
+3   {
+(gdb) n
+5     printf("enter the value of a side of the triangle\n");
+(gdb) n
+enter the value of a side of the triangle
+6     scanf("%d",&x);
+(gdb) n
+n
+7     return x;
+(gdb) n
+8   }
+(gdb) n
+main () at p2original.c:35
+35    b=input_side();
+(gdb) s
+input_side () at p2original.c:3
+3   {
+(gdb) n
+5     printf("enter the value of a side of the triangle\n");
+(gdb) n
+enter the value of a side of the triangle
+6     scanf("%d",&x);
+(gdb) n
+7     return x;
+(gdb) n
+8   }
+(gdb) n
+main () at p2original.c:36
+36    c=input_side();
+(gdb) s
+input_side () at p2original.c:3
+3   {
+(gdb) n
+5     printf("enter the value of a side of the triangle\n");
+(gdb) n
+enter the value of a side of the triangle
+6     scanf("%d",&x);
+(gdb) n
+7     return x;
+(gdb) n
+8   }
+(gdb) n
+main () at p2original.c:37
+37    d= check_scalene(a,b,c);
+(gdb) 
+38    output(a,b,c,d);
+(gdb) s
+output (a=32682, b=32682, c=32682, result=0) at p2original.c:22
+22     if(result==1)
+(gdb) n
+28     printf("the triangle with sides %d %d %d is not scalene",a,b,c);
+(gdb) n
+30  }
+(gdb) n
+main () at p2original.c:39
+39    return 0;
+(gdb) n
+40  }(gdb) 
