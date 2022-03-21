@@ -1,1 +1,17 @@
-
+Breakpoint 1, main () at p5original.c:33
+33    int num1 = input();
+(gdb) n
+Enter a number:
+6
+34    int num2 = input();
+(gdb) n
+Enter a number:
+10
+35    int res = gcd(num1, num2);
+(gdb) n
+36    output(num1, num2, res);
+(gdb) n
+The gcd of 6 and 10 is 2
+37    return 0;
+(gdb) n
+38  }(gdb)

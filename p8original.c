@@ -32,7 +32,7 @@ void find_area(Triangle *t)
 
 void find_areas(int n, Triangle t[n])
 {
-  for (int i = 0; i < n; i++)
+  for (int i =0; i < n; i++)
   {
     find_area(&t[i]);
   }
