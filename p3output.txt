@@ -1,1 +1,54 @@
-
+Breakpoint 1, main () at p3original.c:33
+33    n=input_number();
+(gdb) s
+input_number () at p3original.c:3
+3   {
+(gdb) n
+5     printf("enter the composite number\n");
+(gdb) n
+enter the composite number
+6     scanf("%d",&n);
+(gdb) n
+n
+7     return n;
+(gdb) n
+8   }
+(gdb) n
+main () at p3original.c:34
+34    a=is_composite(n);
+(gdb) s
+is_composite (n=32755) at p3original.c:11
+11    for(int i=2;i<=n/2;i++)
+(gdb) n
+13      if(n%i==0)
+(gdb) n
+11    for(int i=2;i<=n/2;i++)
+(gdb) n
+13      if(n%i==0)
+(gdb) n
+11    for(int i=2;i<=n/2;i++)
+(gdb) n
+13      if(n%i==0)
+(gdb) n
+11    for(int i=2;i<=n/2;i++)
+(gdb) n
+13      if(n%i==0)
+(gdb) n
+15        return 1;
+(gdb) n
+18  }
+(gdb) n
+main () at p3original.c:35
+35    output(n,a);
+(gdb) s
+output (n=32755, composite=1) at p3original.c:21
+21    if(composite==1)
+(gdb) n
+23    printf("%d is a composite number",n);
+(gdb) n
+29  }
+(gdb) n
+main () at p3original.c:36
+36    return 0;
+(gdb) n
+37  }(gdb) 
