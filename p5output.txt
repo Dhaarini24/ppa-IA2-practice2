@@ -1,17 +1,77 @@
 Breakpoint 1, main () at p5original.c:33
 33    int num1 = input();
+(gdb) s
+input () at p5original.c:3
+3   {
+(gdb) n
+5     printf("Enter a number:\n");
 (gdb) n
 Enter a number:
+6     scanf("%d", &num);
+(gdb) n
 6
+7     return num;
+(gdb) n
+8   }
+(gdb) n
+main () at p5original.c:34
 34    int num2 = input();
+(gdb) s
+input () at p5original.c:3
+3   {
+(gdb) n
+5     printf("Enter a number:\n");
 (gdb) n
 Enter a number:
-10
+6     scanf("%d", &num);
+(gdb) n
+8
+7     return num;
+(gdb) n
+8   }
+(gdb) p num
+$1 = 8
+(gdb) n
+main () at p5original.c:35
 35    int res = gcd(num1, num2);
+(gdb) s
+gcd (a=6, b=8) at p5original.c:12
+12    if ( a > b)
 (gdb) n
+18    if( b%a==0)
+(gdb) n
+20    for(i=1;i<=a/2;i++)
+(gdb) n
+22      if (a%i == 0 && b%i == 0)
+(gdb) n
+23        gcd = i;
+(gdb) n
+20    for(i=1;i<=a/2;i++)
+(gdb) n
+22      if (a%i == 0 && b%i == 0)
+(gdb) n
+23        gcd = i;
+(gdb) n
+20    for(i=1;i<=a/2;i++)
+(gdb) n
+22      if (a%i == 0 && b%i == 0)
+(gdb) n
+20    for(i=1;i<=a/2;i++)
+(gdb) n
+25    return gcd;
+(gdb) n
+26  }
+(gdb) n
+main () at p5original.c:36
 36    output(num1, num2, res);
+(gdb) s
+output (a=6, b=8, gcd=2) at p5original.c:29
+29    printf("The gcd of %d and %d is %d\n", a, b, gcd);
 (gdb) n
-The gcd of 6 and 10 is 2
+The gcd of 6 and 8 is 2
+30  }
+(gdb) n
+main () at p5original.c:37
 37    return 0;
 (gdb) n
-38  }(gdb)
+38  }(gdb) 

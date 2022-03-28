@@ -1,1 +1,74 @@
-
+Breakpoint 1, main () at p8original.c:63
+63  {
+(gdb) n
+64    int count = input_n();
+(gdb) s
+input_n () at p8original.c:7
+7   {
+(gdb) n
+9     printf("How many triangles will you enter:\n");
+(gdb) n
+How many triangles will you enter:
+10    scanf("%d", &n);
+(gdb) n
+2
+11    return n;
+(gdb) n
+12  }
+(gdb) n
+main () at p8original.c:65
+65    Triangle tris[count];
+(gdb) s
+66    input_n_triangles(count, tris);
+(gdb) n
+Enter the base, altitude of a triangle:
+1
+2
+Enter the base, altitude of a triangle:
+3
+4
+67    find_areas(count, tris);
+(gdb) n
+68    Triangle small = find_smallest_triangle(count, tris);
+(gdb) s
+find_smallest_triangle (n=2, t=0x7ffd06d8b920) at p8original.c:43
+43    small = t[0];
+(gdb) n
+45    for (int i = 1; i < n; i++)
+(gdb) n
+47      if (small.area > t[i].area)
+(gdb) n
+45    for (int i = 1; i < n; i++)
+(gdb) n
+52    return small;
+(gdb) n
+53  }
+(gdb) n
+main () at p8original.c:69
+69    output(count, tris, small);
+(gdb) s
+output (n=2, t=0x7ffd06d8b920, smallest=...) at p8original.c:56
+56    for (int i = 0; i < n - 1; i++)
+(gdb) n
+58      printf("%f, %f and\n", t[i].base, t[i].altitude);
+(gdb) n
+1.000000, 2.000000 and
+56    for (int i = 0; i < n - 1; i++)
+(gdb) n
+60    printf("%f, %f\nis\ntriangle with base = %f and altitude = %f having area = %f\n", t[n-1].base, t[n-1].altitude, smallest.base, smallest.altitude, smallest.area);
+(gdb) n
+3.000000, 4.000000
+is
+triangle with base = 1.000000 and altitude = 2.000000 having area = 1.000000
+61  }
+(gdb) n
+main () at p8original.c:70
+70    return 0;
+(gdb) n
+71  }(gdb) p count
+$1 = 2
+(gdb) p tris
+$2 = {{base = 1, altitude = 2, area = 1}, {base = 3, altitude = 4, area = 6}}
+(gdb) p small
+$3 = {base = 1, altitude = 2, area = 1}
+(gdb) 
