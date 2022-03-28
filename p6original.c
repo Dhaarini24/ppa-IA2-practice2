@@ -2,18 +2,20 @@
 void input_string(char *a)
 {
   printf("Enter the string:\n");
-  scanf("%s", a);
+  scanf("%[^\n]", a);
 }
 int string_length(char *str)
 {
   int n;
-  for (n = 0; str[n]; n++);
+  for (n=0; str[n]; n++);
   return n;
 }
 void string_copy(char *d, char *s)
 {
-  for(int i=0;s[i]!='\0';i++)
+  int i;
+  for(i=0;s[i]!='\0';i++)
     d[i]=s[i];
+ d[i]='\0';
 }
 char *str_reverse(char *str)
 {
